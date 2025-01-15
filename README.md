@@ -40,7 +40,7 @@ renderMultilineChart = async (targetId) => {
 renderMultilineChart("visual-id");
 ```
 
-Use it in markdown: {{< visual src="js/multi-line-example.js" id="seaice-extent" >}}.
+Use it in markdown: `{{< visual src="js/multi-line-example.js" id="seaice-extent" >}}`.
 
 For more info see [`content/_index.md`](content/_index.md) or [Hugo-Shortcodes](https://gohugo.io/content-management/shortcodes/) 
 on how to use shortcodes in markdown.
