@@ -12,7 +12,7 @@ Feel free to extend it for alternative layouts. Happy hacking ✊.
 
 ## Features
 
-* D3.js for visualization via shortcode {{< visual src="js/<sourceJs>.js" id="<some-id>" >}}
+* D3.js for visualization via shortcode `{{< visual src="js/<sourceJs>.js" id="<some-id>" >}}`
 * Fast adjustments with `tailwindcss`
 
 A d3.js chart script could look something like this (see [multi-line-example.js](https://github.com/arrrrrmin/hugo-datavis/blob/main/assets/js/multi-line-example.js)):
