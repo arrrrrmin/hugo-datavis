@@ -67,6 +67,3 @@ In this case it's simple, you'll need a js file which lives in `/assets/js/visua
 but is referenced as `src="js/visual.js"`, since hugo builds your assets in the public folder as `js/visual.js`.
 All together: `\{\{< visual src="js/multi-line-example.js" id="seaice-extent" >\}\}`, but use it **without** `\`, since
 this page is made from a markdown file, I can't use it properly or I'd place the visualization again.
-
-For more info see [`content/_index.md`](content/_index.md) or [Hugo-Shortcodes](https://gohugo.io/content-management/shortcodes/) 
-on how to use shortcodes in markdown.
