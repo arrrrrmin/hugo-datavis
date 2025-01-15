@@ -1,0 +1,13 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+{{ range .Pages }}
+<a href="{{ .RelPermalink }}">
+  <div class="my-2 p-2 border-slate-500 border rounded-sm">
+    <h2>{{ .LinkTitle }}</h2>
+    {{ .Summary | strings.Truncate 240 }}
+  </div>
+</a>
+
+{{ end }}
+{{ end }}

@@ -1,0 +1,17 @@
+name: hugo-datavis
+license: MIT
+licenselink: https://github.com/arrrrrmin/hugo-datavis/LICENSE
+description: A hugo theme to use for simple data visualization projects. Using hugo + tailwindcss + d3js.
+homepage: https://github.com/arrrrrmin/hugo-datavis/
+demosite: https://owner.github.io/repo
+tags:
+  - datavisualization
+  - data
+  - visualization
+  - blog
+features:
+  - d3js
+  - tailwindcss
+author:
+  name: arrrrrmin
+  homepage: https://github.com/arrrrrmin

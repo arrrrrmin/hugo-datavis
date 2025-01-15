@@ -1,0 +1,13 @@
+<header class="bg-white">
+  <nav class="mx-auto grid xs:grid-cols-1 sm:flex justify-between items-baseline max-w-7xl py-6" aria-label="Global">
+    <div class="py-2">
+        <a href="/" class="py-1.5">
+        <h1>{{ site.Title }}</h1>
+        </a>
+    </div>
+    
+    <div class="flex gap-x-6">
+        {{ partial "menu.html" (dict "menuId" "main" "page" .) }}
+    </div>
+  </nav>
+</header>

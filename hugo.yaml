@@ -1,0 +1,37 @@
+baseURL: https://example.org/
+languageCode: en-US
+title: Hugo Datavis
+copyright: "© [Contributors](https://github.com/arrrrrmin/hugo-datavis/graphs/contributors)"
+
+menus:
+  main:
+    - name: Styles & config
+      pageRef: /styles-config
+      weight: 20
+    - name: Limitations
+      pageRef: /limitations
+      weight: 30
+
+params:
+  author: arrrrrmin
+  description: A hugo theme to use for simple data visualization projects. Using hugo + tailwindcss + d3js.
+  disableScrollToTop: false
+  socialIcons:
+    - name: Github
+      title: View Source on Github
+      url: "https://github.com/arrrrrmin/hugo-datavis"
+    - name: Mastodon
+      title: See you on mastodon
+      url: "https://chaos.social/@arrrrrmin"
+    - name: Bluesky
+      title: See you on bluesky
+      url: "https://bsky.app/profile/arrrrrmin.bsky.social"
+
+markup:
+  highlight:
+    noClasses: false
+
+module:
+  hugoVersion:
+    extended: false
+    min: 0.116.0

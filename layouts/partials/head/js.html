@@ -1,0 +1,26 @@
+{{/*  To load all the js at once do this:
+
+{{ range resources.Match "js/*.js" }}
+  {{- if eq hugo.Environment "development" }}
+    <script src="{{ .RelPermalink }}"></script>
+  {{- else }}
+    {{- $opts := dict "minify" true }}
+    {{- with . | js.Build $opts | fingerprint }}
+      <script src="{{ .RelPermalink }}" integrity="{{- .Data.Integrity }}" crossorigin="anonymous"></script>
+    {{- end }}
+  {{- end }}
+{{ end }}
+
+*/}}
+
+{{/* To load single files do this: */}}
+{{ with resources.Get .jsPath }}
+{{- if eq hugo.Environment "development" }}
+    <script src="{{ .RelPermalink }}"></script>
+  {{- else }}
+    {{- $opts := dict "minify" true }}
+    {{- with . | js.Build $opts | fingerprint }}
+      <script src="{{ .RelPermalink }}" integrity="{{- .Data.Integrity }}" crossorigin="anonymous"></script>
+    {{- end }}
+  {{- end }}
+{{ end }}
