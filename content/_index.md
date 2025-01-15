@@ -36,7 +36,7 @@ To adjust styles see [this](/tailwind).
 
 ## Using d3.js
 
-A d3.js chart script could look something like this (for more see [multi-line-example.js](/assets/js/multi-line-example.js)):
+A d3.js chart script could look something like this (for more see [multi-line-example.js](https://github.com/arrrrrmin/hugo-datavis/blob/main/assets/js/multi-line-example.js)):
 ```JavaScript
 renderMultilineChart = async (targetId) => {
     initializeButton = () => {
