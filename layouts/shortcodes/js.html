@@ -1,0 +1,9 @@
+<div {{ with .Get "id" }}id="{{ . }}" {{ end }}>
+    {{ with .Get "src" }}
+    {{ $jsPath := . }}
+    {{ partial "head/js.html" (dict "jsPath" $jsPath) }}
+    {{ end }}
+    <script>
+        {{ .Inner | safeJS }}
+    </script>
+</div>

@@ -1,5 +1,5 @@
 
-renderMultilineChart = async (targetId) => {
+renderMultilineChart = async (targetId, dataPath) => {
 
     initializeButton = () => {
         // Initialize navigations required for interactions from within the chart js.
@@ -22,13 +22,13 @@ renderMultilineChart = async (targetId) => {
 
     initializeButton();
     const width = 928;
-    const height = 720;
+    const height = 420;
     const marginTop = 20;
     const marginRight = 30;
     const marginBottom = 80;
     const marginLeft = 40;
 
-    const data = await d3.csv("northern-seaice-extent.csv").then(
+    const data = await d3.csv(dataPath).then(
         D => D.map(
             (d) => ({ date: new Date(d.year, d.month, d.day), value: 1e6 * d.extent }
             )).sort((a, b) => a.date - b.date)
@@ -134,5 +134,5 @@ renderMultilineChart = async (targetId) => {
 }
 
 // Please use this id in you'r shortcode call in your markdown.
-const id = "seaice-extent";
-renderMultilineChart(id);
+// const id = "seaice-extent";
+// renderMultilineChart(id);

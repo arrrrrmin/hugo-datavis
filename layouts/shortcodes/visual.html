@@ -1,9 +1,0 @@
-
-<div class="py-6" 
-{{ with .Get "id" }}id="{{ . }}"{{ end }}
-></div>
-
-{{ with .Get "src" }}
-{{ $jsPath := . }}
-{{ partial "head/js.html" (dict "jsPath" $jsPath) }}
-{{ end }}

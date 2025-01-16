@@ -12,12 +12,12 @@ Feel free to extend it for alternative layouts. Happy hacking ✊.
 
 ## Features
 
-* D3.js for visualization via shortcode {{< visual src="js/<sourceJs>.js" id="<some-id>" >}}
+* D3.js for visualization via shortcode `{{< js >}}...{{< /js >}}`
 * Fast adjustments with `tailwindcss`
 
 A d3.js chart script could look something like this (see [multi-line-example.js](https://github.com/arrrrrmin/hugo-datavis/blob/main/assets/js/multi-line-example.js)):
 ```JavaScript
-renderMultilineChart = async (targetId) => {
+renderMultilineChart = async (targetId, dataPath) => {
     initializeButton = () => {
         // Initialize navigations required for interactions from within the chart js.
         // I'd recommend to add navigations to the same div as you'r animation.
@@ -29,7 +29,7 @@ renderMultilineChart = async (targetId) => {
             .html("Animate")
     }
     // ...
-    const data = await d3.csv("northern-seaice-extent.csv").then(
+    const data = await d3.csv(dataPath).then(
         // ...    
     );
     // ...
@@ -37,10 +37,16 @@ renderMultilineChart = async (targetId) => {
         .append("svg")
         //...
 }
-renderMultilineChart("visual-id");
 ```
 
-Use it in markdown: {{< visual src="js/multi-line-example.js" id="seaice-extent" >}}.
+Use it in markdown:
+```Javascript
+// Pass an id for the container div and a src script to find the code you'll call inside
+{{< js id="example" src="js/multi-line-example.js" >}}
+renderMultilineChart("example", "../northern-seaice-extent.csv"); // Call the d3.js chart function
+{{< /js >}}
+ // Close js, done
+```
 
 For more info see [`content/_index.md`](content/_index.md) or [Hugo-Shortcodes](https://gohugo.io/content-management/shortcodes/) 
 on how to use shortcodes in markdown.
