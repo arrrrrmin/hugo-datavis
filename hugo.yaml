@@ -1,7 +1,6 @@
 baseURL: https://example.org/
 languageCode: en-US
 title: Hugo Datavis
-copyright: "© [Contributors](https://github.com/arrrrrmin/hugo-datavis/graphs/contributors)"
 
 menus:
   main:
@@ -15,6 +14,7 @@ menus:
 params:
   author: arrrrrmin
   description: A hugo theme to use for simple data visualization projects. Using hugo + tailwindcss + d3js.
+  copyrightUrl: "https://github.com/arrrrrmin/hugo-datavis"
   disableScrollToTop: false
   socialIcons:
     - name: Github
