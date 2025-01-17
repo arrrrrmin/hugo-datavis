@@ -1,4 +1,4 @@
-<div {{ with .Get "id" }}id="{{ . }}" {{ end }}>
+<div {{ with .Get "id" }}id="{{ . }}" {{ end }} {{ with .Get "class" }}class="{{ . }}" {{ end }} >
     {{ with .Get "src" }}
     {{ $jsPath := . }}
     {{ partial "head/js.html" (dict "jsPath" $jsPath) }}

@@ -9,7 +9,7 @@ build static sides with hugo.
 It uses [tailwindcss](https://tailwindcss.com) for fast styling, [d3.js](https://d3js.org) 
 to visualize data and obviously [hugo](https://gohugo.io) to build the static side. 
 
-{{< js id="example" src="js/multi-line-example.js" >}}
+{{< js id="example" src="js/multi-line-example.js" class="py-2">}}
 renderMultilineChart("example", "northern-seaice-extent.csv");
 {{< /js >}}
 
