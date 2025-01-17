@@ -1,0 +1,50 @@
+{{/* Use Title + Subtitle for everything! */}}
+
+{{- $images := partial "_funcs/get-page-images" . }}
+{{- with index $images 0 }}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="{{ .Permalink }}">
+{{- else }}
+  <meta name="twitter:card" content="summary">
+{{- end }}
+
+{{- with or .Title site.Title site.Params.title | plainify }}
+  <meta name="twitter:title" content="{{ . }}">
+{{- end }}
+
+{{- with or .Description .Summary site.Params.description | plainify | htmlUnescape }}
+  <meta name="twitter:description" content="{{ trim . "\n\r\t " }}">
+{{- end }}
+
+{{- $twitterSite := "" }}
+{{- with site.Params.social }}
+  {{- if reflect.IsMap . }}
+    {{- with .twitter }}
+      {{- $content := . }}
+      {{- if not (strings.HasPrefix . "@") }}
+        {{- $content = printf "@%v" . }}
+      {{- end }}
+      <meta name="twitter:site" content="{{ $content }}">
+    {{- end }}
+  {{- end }}
+{{- end }}
+{{- with or .Params.locale site.Language.LanguageCode site.Language.Lang }}
+<meta property="og:locale" content="{{ . }}">
+{{- end }}
+
+{{- if .Params.preview }}
+    {{- with .Params.preview }}
+      <meta property="og:image" content="{{ . | absURL }}">
+    {{- end }}
+  {{- else }}
+    {{- with site.Params.preview }}
+      <meta property="og:image" content="{{ . | absURL }}">
+    {{- end }}
+  {{- end }}
+
+{{- if and .Params.preview .Params.previewAlt }}
+  {{- with .Params.previewAlt }}
+    <meta property="og:image:alt" content="{{ . }}">
+  {{- end }}
+{{- end }}
+

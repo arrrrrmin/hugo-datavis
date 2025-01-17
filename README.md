@@ -10,6 +10,10 @@ to visualize data and [hugo](https://gohugo.io) build the static side.
 It's ment to have a single page and a few menu pages for isolated data projects. 
 Feel free to extend it for alternative layouts. Happy hacking ✊.
 
+## Preview
+
+![Hugo-datavis preview image](images/tn.png)
+
 ## Features
 
 * D3.js for visualization via shortcode `{{< js >}}...{{< /js >}}`
@@ -42,8 +46,8 @@ renderMultilineChart = async (targetId, dataPath) => {
 Use it in markdown:
 ```Javascript
 // Pass an id for the container div and a src script to find the code you'll call inside
-{{< js id="example" src="js/multi-line-example.js" >}}
-renderMultilineChart("example", "../northern-seaice-extent.csv"); // Call the d3.js chart function
+{{< js id="example" src="js/multi-line-example.js" class="py-2">}}
+    renderMultilineChart("example", "../northern-seaice-extent.csv"); // Call the d3.js chart function
 {{< /js >}}
  // Close js, done
 ```

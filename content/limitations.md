@@ -1,6 +1,14 @@
 ---
 title: "Limitations"
 date: 2025-01-14T08:00:00-07:00
+draft: false
+tags:
+    - data
+    - data-vis
+    - visualization
+    - d3js
+    - hugo
+    - hugo-theme
 ---
 
 There are some limitations to what this theme can do. 

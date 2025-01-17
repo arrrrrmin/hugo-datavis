@@ -12,20 +12,23 @@ menus:
       weight: 30
 
 params:
-  author: arrrrrmin
+  author: 
+    name: arrrrrmin
+    social: https://chaos.social/@arrrrrmin 
   description: A hugo theme to use for simple data visualization projects. Using hugo + tailwindcss + d3js.
-  copyrightUrl: "https://github.com/arrrrrmin/hugo-datavis"
+  copyrightUrl: https://github.com/arrrrrmin/hugo-datavis
   disableScrollToTop: false
+  preview: tn.png  # Used as og:image if no page frontmatter preview is set
   socialIcons:
     - name: Github
       title: View Source on Github
-      url: "https://github.com/arrrrrmin/hugo-datavis"
+      url: https://github.com/arrrrrmin/hugo-datavis
     - name: Mastodon
       title: See you on mastodon
-      url: "https://chaos.social/@arrrrrmin"
+      url: https://chaos.social/@arrrrrmin"
     - name: Bluesky
       title: See you on bluesky
-      url: "https://bsky.app/profile/arrrrrmin.bsky.social"
+      url: https://bsky.app/profile/arrrrrmin.bsky.social
 
 markup:
   highlight:

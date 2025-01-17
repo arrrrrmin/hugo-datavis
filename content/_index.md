@@ -2,6 +2,15 @@
 title: "Hugo-datavis Theme"
 date: 2025-01-14T08:00:00-07:00
 draft: false
+preview: tn.png
+previewAlt: Thumbnail image showing a website with a nice line chart on it.
+tags:
+    - data
+    - data-vis
+    - visualization
+    - d3js
+    - hugo
+    - hugo-theme
 ---
 
 This is a simple theme to experiment with d3js and hugo, for data projects that want to 
@@ -9,7 +18,7 @@ build static sides with hugo.
 It uses [tailwindcss](https://tailwindcss.com) for fast styling, [d3.js](https://d3js.org) 
 to visualize data and obviously [hugo](https://gohugo.io) to build the static side. 
 
-{{< js id="example" src="js/multi-line-example.js" >}}
+{{< js id="example" src="js/multi-line-example.js" class="py-2">}}
 renderMultilineChart("example", "northern-seaice-extent.csv");
 {{< /js >}}
 
