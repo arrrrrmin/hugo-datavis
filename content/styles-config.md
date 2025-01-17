@@ -1,6 +1,14 @@
 ---
 title: "Styles & config"
 date: 2025-01-14T08:00:00-07:00
+draft: false
+tags:
+    - data
+    - data-vis
+    - visualization
+    - d3js
+    - hugo
+    - hugo-theme
 ---
 
 You can adjust this theme quite easily. You have to do the [install](/#install) steps first.
