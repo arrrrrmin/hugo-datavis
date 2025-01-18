@@ -615,12 +615,15 @@ pre>code {
 }
 
 blockquote {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   border: 1px solid;
   border-color: #e7e5e4;
+  border-radius: 0.25rem;
   color: #57534e;
 }
 
@@ -629,6 +632,27 @@ ul {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   list-style: disc;
+}
+
+table {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  word-break: keep-all;
+}
+
+th {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+td {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  border-top: 1px solid;
+  border-color: #e7e5e4;
 }
 
 .container {
@@ -667,6 +691,10 @@ ul {
 
 .static {
   position: static;
+}
+
+.relative {
+  position: relative;
 }
 
 .mx-auto {
@@ -736,6 +764,12 @@ ul {
 .gap-x-6 {
   -moz-column-gap: 1.5rem;
        column-gap: 1.5rem;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .rounded {
