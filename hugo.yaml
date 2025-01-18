@@ -7,9 +7,12 @@ menus:
     - name: Styles & config
       pageRef: /styles-config
       weight: 20
-    - name: Limitations
-      pageRef: /limitations
+    - name: Examples
+      pageRef: /examples
       weight: 30
+    - name: Limits
+      pageRef: /limitations
+      weight: 40
 
 params:
   author: 
@@ -18,7 +21,7 @@ params:
   description: A hugo theme to use for simple data visualization projects. Using hugo + tailwindcss + d3js.
   copyrightUrl: https://github.com/arrrrrmin/hugo-datavis
   disableScrollToTop: false
-  preview: tn.png  # Used as og:image if no page frontmatter preview is set
+  preview: tn.png  # Used as og:image when no page frontmatter preview is set
   socialIcons:
     - name: Github
       title: View Source on Github

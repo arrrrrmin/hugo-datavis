@@ -3,7 +3,7 @@
 const plugin = require("tailwindcss/plugin");
 
 module.exports = {
-  content: ["./content/**/*.{html,js}", "./layouts/**/*.{html,js}", "./assets/js/*.js"],
+  content: ["./content/**/*.{html,js,md}", "./layouts/**/*.{html,js}", "./assets/js/*.js"],
   theme: {
     extend: {},
   },
@@ -66,13 +66,16 @@ module.exports = {
         },
         "pre>code": {border: "none"},
         "blockquote": {
-          paddingTop: config("theme.padding.2"),
-          paddingBottom: config("theme.padding.2"),
+          marginTop: config("theme.padding.1"),
+          marginBottom: config("theme.padding.1"),
+          paddingTop: config("theme.padding.1"),
+          paddingBottom: config("theme.padding.1"),
           paddingLeft: config("theme.spacing.2"),
           paddingRight: config("theme.spacing.2"),
 
           border: "1px solid",
           borderColor: config("theme.colors.stone.200"),
+          borderRadius: config("theme.spacing.1"),
           color: config("theme.colors.stone.600"),
         },
         "ul": {
@@ -82,6 +85,28 @@ module.exports = {
           
           listStyle: "disc",
         },
+        "table": {
+          paddingTop: config("theme.padding.2"),
+          paddingBottom: config("theme.padding.2"),
+          
+          display: "block",
+          width: config("theme.width.full"),
+          overflowX: "auto",
+          wordBreak: "keep-all",
+        },
+        "th": {
+          paddingLeft: config("theme.padding.2"),
+          paddingRight: config("theme.padding.2"),
+          
+          fontWeight: config("theme.fontWeight.regular"),
+          
+        },
+        "td": {
+          paddingTop: config("theme.padding.1"),
+          paddingBottom: config("theme.padding.1"),
+          borderTop: `1px solid`,
+          borderColor: config("theme.colors.stone.200"),
+        }
       })
     }),
   ],
